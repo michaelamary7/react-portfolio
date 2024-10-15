@@ -1,0 +1,26 @@
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-content: flex-end;
+    list-style-type: none;
+    padding: 0%;
+}
+.custom-spacing {
+    
+    margin-right: 2rem;  
+    font-family: 'Fantasy'; 
+    font-weight: 800; 
+    font-size: 1.5rem;
+    justify-content: end;
+    color: rgb(223, 219, 15);
+    text-shadow: 
+        -2px -2px 0 #8B6914,  
+         2px -2px 0 #8B6914,
+        -2px  2px 0 #8B6914,
+         2px  2px 0 #8B6914;
+  }
+  
+  .custom-spacing:last-child {
+    margin-right: 3rem;
+  }
