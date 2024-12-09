@@ -1,19 +1,40 @@
-import Header from "./components/Header";
-import { Outlet } from "react-router-dom";
-import Footer from "./components/Footer";
-import './App.css';
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import App from './App';
+import ErrorPage from './pages/ErrorPage';
+import ResumePage from './pages/ResumePage';
+import ProjectsPage from './pages/ProjectPage';
+import AboutPage from './pages/AboutMePage';
+import ContactPage from './pages/ContactPage';
 
+import './index.css';
 
-function App() {
-  return (
-    <div className="app-container">
-      <Header />
-      <main className="main-content">
-        <Outlet />
-      </main>
-      <Footer />
-    </div>
-  );
-}
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <App />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        index: true,
+        element: <AboutPage />,
+      },
+      {
+        path: 'projects',
+        element: <ProjectsPage />,
+      },
+      {
+        path: 'contact',
+        element: <ContactPage />,
+      },
+      {
+        path: 'resume',
+        element: <ResumePage />,
+      },
+    ],
+  },
+]);
 
-export default App;
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <RouterProvider router={router} />
+);

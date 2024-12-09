@@ -1,6 +1,6 @@
 import React from 'react';
-import Project from '../components/ProjectTile';
-import projects from '../components/UI/projects/ProjectsCard';
+import projects from '../components/UI/Projects/ProjectCard';
+import Project from '../components/ProjectHeader';
 
 const ProjectGallery = () => {
     return (

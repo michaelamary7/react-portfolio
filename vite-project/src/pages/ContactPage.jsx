@@ -40,7 +40,7 @@ export default function ContactPage() {
     <div style={{ margin: '2rem', textAlign: 'start', alignContent: 'space-between' }} className="container mx-auto max-w-2xl px-4 py-8">
       <div className="mb-8 text-center">
         <h1 className="text-3xl font-bold mb-2">Contact</h1>
-        <p className="text-gray-600">I'd love to hear from you. Send me a message!</p>
+        <p className="text-gray-600">Contact Me</p>
       </div>
 
       <form onSubmit={handleSubmit} className="form">
